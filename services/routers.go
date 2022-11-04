@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Router(r *gin.Engine) *gin.Engine {
+func Router(r *gin.Engine) {
 
 	r.POST("/user/register", RegisterUser)
 	r.POST("/user/login", LoginUser)
@@ -21,5 +21,4 @@ func Router(r *gin.Engine) *gin.Engine {
 	r.GET("/user/:id/product/activities", GetUserProductActivity)
 	r.GET("/user/:id/activities", FetchUserLoginActivities)
 
-	return r
 }
